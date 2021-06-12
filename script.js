@@ -1,8 +1,8 @@
 const constants = {
-    NOT_DONE: 'Not Done',
+    TO_DO: 'To-Do',
     DONE: 'Done',
-    NOT_DONE_TODOS: 'NOT_DONE_TODOS',
-    DONE_TODOS: 'DONE_TODOS'
+    TODO_LIST: 'TODO_LIST',
+    DONE_LIST: 'DONE_LIST'
 }
 
 const toDoInput = document.querySelector('#txtToDo');
@@ -22,8 +22,8 @@ toDoSubmitButton.addEventListener('click', (e) => {
 });
 
 function loadLocalStorage() {
-    const savedNotDoneList = JSON.parse(localStorage.getItem(constants.NOT_DONE_TODOS));
-    const savedDoneList = JSON.parse(localStorage.getItem(constants.DONE_TODOS));
+    const savedNotDoneList = JSON.parse(localStorage.getItem(constants.TODO_LIST));
+    const savedDoneList = JSON.parse(localStorage.getItem(constants.DONE_LIST));
 
     if (savedNotDoneList) {
         for (let item of savedNotDoneList)
@@ -44,17 +44,17 @@ function saveButtonClicked(e) {
         if(toDoDoneSection.childElementCount != 0)
             savedDoneList.push(toDoDoneSection.children[i].firstChild.children[1].innerHTML);
     }
-    localStorage.setItem(constants.DONE_TODOS, JSON.stringify(savedDoneList));
+    localStorage.setItem(constants.DONE_LIST, JSON.stringify(savedDoneList));
 
     for (let i = 1; i < toDoNotDoneSection.childElementCount; i++) {
         if(toDoNotDoneSection.childElementCount != 0)
             savedNotDoneList.push(toDoNotDoneSection.children[i]?.firstChild.children[1].innerHTML);
     }
-    localStorage.setItem(constants.NOT_DONE_TODOS, JSON.stringify(savedNotDoneList));
+    localStorage.setItem(constants.TODO_LIST, JSON.stringify(savedNotDoneList));
 }
 
 function moveToDoCart(e) {
-    if (e.target.parentNode.parentNode.parentNode.parentNode.children[0].innerHTML == constants.NOT_DONE) {
+    if (e.target.parentNode.parentNode.parentNode.parentNode.children[0].innerHTML == constants.TO_DO) {
         addNewTodoItem(e.target.parentNode.parentNode.children[1].innerHTML, toDoDoneSection);
         e.target.parentNode.parentNode.parentNode.remove();
 
