@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>To-Do w/Vanilla Javascript</title>
+</head>
+<body>
+    <header>
+        <h3 id="app-title">To-Do w/Vanilla Javascript</h3>
+    </header>
+    <main>
+        <div class="container p-3">
+            <div class="card">
+                <div class="card-header" id="add-todo-panel">
+                    <h6 id="add-todo-title">Add To-Do</h6>
+                    <button class="btn" id="btn-todo-save">Save To-Dos</button>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <form id="addTaskForm">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="To-Do..." id="txtToDo">
+                                <div class="input-group-append">
+                                    <button class="btn" id="btn-todo-submit" type="submit">
+                                        <i class="fas fa-plus-square"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-3" id="todo-container">
+                <div class="card-header">
+                    <h6>My Tasks</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row" id="not-done-todos">
+                                <h6>To-Do</h6>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row" id="done-todos">
+                                <h6>Done</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/773085b81f.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
