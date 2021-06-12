@@ -1,0 +1,49 @@
+#app-title {
+    color: gray;
+    text-align: center;
+    margin:2rem;
+}
+
+#txtTodo {
+    width: 200px;
+    background-color: gray;
+}
+
+#not-done-todos{
+    padding: 2rem;
+    border-right: 1px solid gray;
+}
+
+#done-todos {
+    padding: 2rem;
+}
+
+#add-todo-panel {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.card-header {
+    background-color: #f9c74f;
+    color: white;
+}
+
+.card-footer {
+    background-color: #f9c74f;
+    color: white;
+}
+
+#btn-todo-save {
+    background-color: #fdfcdc;
+}
+
+#btn-todo-submit {
+    background-color: #f9844a;
+    color: white;
+}
+
+#txtToDo:focus {
+    box-shadow: none;
+}
