@@ -18,6 +18,41 @@
     padding: 2rem;
 }
 
+
+#not-done-todos > .todo-item > .card > .card-header { 
+    text-align: center;
+    background-color: #99d98c;
+    border: 0px;
+}
+
+#not-done-todos > .todo-item > .card > .card-body { 
+    text-align: center;
+    background-color: #99d98c;
+    color: white;
+}
+
+#not-done-todos > .todo-item > .card > .card-footer { 
+    text-align: center;
+    background-color: #99d98c;
+}
+
+#done-todos > .todo-item > .card > .card-header { 
+    text-align: center;
+    background-color: #d9ed92;
+    border: 0px;
+}
+
+#done-todos > .todo-item > .card > .card-body { 
+    text-align: center;
+    background-color: #d9ed92;
+    color: gray;
+}
+
+#done-todos > .todo-item > .card > .card-footer { 
+    text-align: center;
+    background-color: #d9ed92;
+}
+
 #add-todo-panel {
     display:flex;
     justify-content: space-between;
